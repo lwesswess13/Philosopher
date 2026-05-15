@@ -1,0 +1,34 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sbouchib <sbouchib@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/05/13 09:21:34 by sbouchib          #+#    #+#              #
+#    Updated: 2026/05/13 09:21:35 by sbouchib         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = philo
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -pthread -g3
+RM = rm -rf
+
+SRCS = main.c init.c routine.c utils.c monitor.c
+OBJS = $(SRCS:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
