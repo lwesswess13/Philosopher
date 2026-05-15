@@ -6,13 +6,13 @@
 #    By: sbouchib <sbouchib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/13 09:21:34 by sbouchib          #+#    #+#              #
-#    Updated: 2026/05/13 09:21:35 by sbouchib         ###   ########.fr        #
+#    Updated: 2026/05/15 17:34:58 by sbouchib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -pthread -g3
+CFLAGS = -Wall -Wextra -Werror -pthread
 RM = rm -rf
 
 SRCS = main.c init.c routine.c utils.c monitor.c
